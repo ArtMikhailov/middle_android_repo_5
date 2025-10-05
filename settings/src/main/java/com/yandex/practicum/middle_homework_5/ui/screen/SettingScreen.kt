@@ -19,15 +19,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.yandex.practicum.middle_homework_5.R
-import com.yandex.practicum.middle_homework_5.data.data_store.SettingContainer.Companion.DEFAULT_REFRESH_PERIOD
-import com.yandex.practicum.middle_homework_5.data.data_store.SettingContainer.Companion.FIST_LAUNCH_DELAY
-import com.yandex.practicum.middle_homework_5.ui.AppViewModel
+import com.yandex.practicum.middle_homework_5.data_store.SettingContainer.Companion.DEFAULT_REFRESH_PERIOD
+import com.yandex.practicum.middle_homework_5.data_store.SettingContainer.Companion.FIST_LAUNCH_DELAY
+import com.yandex.practicum.middle_homework_5.ui.SettingsViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun SettingScreen(
     modifier: Modifier = Modifier,
-    appViewModel: AppViewModel = koinViewModel()
+    appViewModel: SettingsViewModel = koinViewModel()
 ) {
     val currentSetting = appViewModel.getCurrentSetting()
     var periodic by rememberSaveable { mutableStateOf(currentSetting.periodic.toString()) }

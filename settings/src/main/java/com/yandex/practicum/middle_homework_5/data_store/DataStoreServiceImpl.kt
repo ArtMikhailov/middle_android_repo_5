@@ -1,4 +1,4 @@
-package com.yandex.practicum.middle_homework_5.data.data_store
+package com.yandex.practicum.middle_homework_5.data_store
 
 import android.content.Context
 import androidx.datastore.core.DataStore

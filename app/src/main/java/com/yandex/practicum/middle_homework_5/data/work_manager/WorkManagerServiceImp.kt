@@ -9,8 +9,8 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import com.yandex.practicum.middle_homework_5.data.data_store.SettingContainer.Companion.DEFAULT_REFRESH_PERIOD
-import com.yandex.practicum.middle_homework_5.data.data_store.SettingContainer.Companion.FIST_LAUNCH_DELAY
+import com.yandex.practicum.middle_homework_5.data_store.SettingContainer.Companion.DEFAULT_REFRESH_PERIOD
+import com.yandex.practicum.middle_homework_5.data_store.SettingContainer.Companion.FIST_LAUNCH_DELAY
 import com.yandex.practicum.middle_homework_5.ui.contract.DataStoreService
 import com.yandex.practicum.middle_homework_5.ui.contract.WorkManagerService
 import kotlinx.coroutines.CoroutineScope
