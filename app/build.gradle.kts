@@ -1,9 +1,14 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.build.logic.check.translations)
 }
+
+tasks.preBuild.dependsOn("untranslatedStrings")
 
 android {
     namespace = "com.yandex.practicum.middle_homework_5"
@@ -59,6 +64,9 @@ dependencies {
     implementation(libs.androidx.work.manager.ktx)
     implementation(libs.androidx.data.store)
     implementation(libs.androidx.navigation.compose)
+
+    implementation(project(":settings"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
